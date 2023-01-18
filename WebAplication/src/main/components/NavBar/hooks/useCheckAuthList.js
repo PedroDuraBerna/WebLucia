@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useMemo, useState } from "react";
 
 // Este hook nos devuelve los items que se pueden mostrar en base a la autenticación
-export const useCheckAuth = (auth = '', items = [{ permission: '' }]) => {
+export const useCheckAuthList = (auth = '', items = [{ permission: '' }]) => {
 
     const [itemsFiltered, setItemsFiltered] = useState(items);
 
-    useEffect(() => {
+    useMemo(() => {
 
         switch (auth) {
             case 'authenticated':

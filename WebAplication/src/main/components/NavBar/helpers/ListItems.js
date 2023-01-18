@@ -4,21 +4,21 @@ export const listItems = [
         text: 'Perfil',
         badgeContent: 0, // Lo obtendríamos del store
         permission: 'authenticated',
-        navLink: '/profile',
+        navLink: '/home/profile',
     },
     {
         icon: 'Notifications',
         text: 'Notificaciones',
         badgeContent: 14, // Lo obtendríamos del store
         permission: 'authenticated',
-        navLink: '/profile/notifications',
+        navLink: '/home/profile/notifications',
     },
     {
         icon: 'Mail',
         text: 'Correo',
         badgeContent: 27, // Lo obtendríamos del store
         permission: 'authenticated',
-        navLink: '/profile/mails',
+        navLink: '/home/profile/emails',
     },
     {
         icon: 'Login',
@@ -32,14 +32,14 @@ export const listItems = [
         text: 'Menú de Admin',
         badgeContent: 0, // Lo obtendríamos del store
         permission: 'authenticated-writter-admin',
-        navLink: '/*',
+        navLink: '/home/profile/admin',
     },
     {
         icon: '',
         text: 'Menú de redactor',
         badgeContent: 0, // Lo obtendríamos del store
         permission: 'authenticated-writter',
-        navLink: '/*',
+        navLink: '/home/profile/editor',
     },
     {
         icon: '',
@@ -67,6 +67,6 @@ export const listItems = [
         text: 'Sobre nosotros',
         badgeContent: 0, // Lo obtendríamos del store
         permission: 'allways',
-        navLink: '/about',
+        navLink: '/home/about',
     },
 ];

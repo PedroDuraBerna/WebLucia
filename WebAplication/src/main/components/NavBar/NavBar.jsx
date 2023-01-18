@@ -1,9 +1,13 @@
 import { AppBar, Box, Drawer, IconButton, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
-import { MenuDrawer } from './MenuListButonsDrawer';
+import { NavBarMenuList } from './components';
+import { AppBreadcrumbs } from './components';
 
 export const NavBar = () => {
+
+    // Obtenemos auth del store
+    const auth = 'authenticated-writter-admin'; // Seteo esto para codificar
 
     const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -11,9 +15,11 @@ export const NavBar = () => {
         setMobileOpen(!mobileOpen);
     };
 
-
     return (
         <>
+
+            {/* NAVEGADOR HORIZONTAL */}
+
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar position='static'>
                     <Toolbar>
@@ -30,27 +36,35 @@ export const NavBar = () => {
                             variant='h5'
                             noWrap
                             component='div'
-                            sx={{ display: { xs: 'none', sm: 'block' } }}
+                            sx={{ display: 'block' }}
                         >
                             Digital Space</Typography>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                                
-                            </Box>
+                        <Box sx={{ flexGrow: 1, display: { md: 'block', xs: 'none' } }}>
+                            <NavBarMenuList auth={auth} />
                         </Box>
                     </Toolbar>
                 </AppBar>
             </Box>
+
+            {/* BREADCRUMBS */}
+            <Box sx={{ p: '10px' }}>
+                <AppBreadcrumbs />
+            </Box>
+
+            {/* NAVEGADOR VERTICAL */}
+
             <Drawer
                 variant='temporary'
                 open={mobileOpen}
                 onClose={handleDrawerToggle}
                 sx={{
                     display: { xs: 'block', md: 'none' },
-                    '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 300 },
+                    '& .MuiDrawer-paper': { width: 300 },
                 }}
             >
-                <MenuDrawer></MenuDrawer>
+                <Box>
+                    <NavBarMenuList auth={auth} />
+                </Box>
             </Drawer>
         </>
     )
