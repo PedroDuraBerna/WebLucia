@@ -8,6 +8,8 @@ export const CategoriesPage = () => {
             <p><NavLink to='/categories/news' >Noticias</NavLink></p>
             <p><NavLink to='/categories/books' >Libros</NavLink></p>
             <p><NavLink to='/categories/films' >Películas</NavLink></p>
+            <br />
+            <p>El objetivo</p>
         </MainLayout>
     )
 }

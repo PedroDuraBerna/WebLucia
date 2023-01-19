@@ -3,7 +3,7 @@ import { AppBreadcrumbs } from '../components';
 
 export const Footer = () => {
   return (
-    <Grid container marginTop='50px' >
+    <Grid container >
       <Grid item width='100%' >
         <AppBreadcrumbs></AppBreadcrumbs>
         <AppBar position='static' sx={{ padding: '20px' }} >

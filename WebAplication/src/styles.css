@@ -1,10 +1,12 @@
-
 * {
     padding: 0px;
     margin: 0px;
 }
 
-.activeNavLink {
-    color: #fff;
-    background: #604ec4;
+.activeNavLink_primary {
+    background: #673ab7;
+}
+
+.activeNavLink_secondary {
+    background-color: #c6b6e9;
 }

@@ -1,5 +1,5 @@
-import { AccountCircle, AppRegistration, Category, Home, Info, Login, Logout, Mail, Notifications, QuestionMark } from '@mui/icons-material';
-import { Badge, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
+import { AccountCircle, AppRegistration, Category, Home, Info, Login, Logout, Mail, Notifications } from '@mui/icons-material';
+import { Badge, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import { mainTheme } from '../../../../theme/mainTheme';
 
@@ -8,7 +8,7 @@ import { mainTheme } from '../../../../theme/mainTheme';
 const { palette } = mainTheme;
 const extraStyle = { color: { xs: palette.primary.main }, display: { md: 'none' }, fontSize: '30px' };
 
-export const NavBarMenuListItem = ({ navLink = '/home', badgeContent = 0, type = 'AccountCircle', text = 'text' }) => {
+export const NavBarMenuListItem = ({ navLink = '/home', badgeContent = 0, type = 'AccountCircle', text = 'text', textColor = 'primary' }) => {
 
     // Pensar hacer custom hook para obtener los iconos
 
@@ -43,43 +43,87 @@ export const NavBarMenuListItem = ({ navLink = '/home', badgeContent = 0, type =
             icon = <AppRegistration sx={extraStyle} />;
             break;
         default:
-            icon = <QuestionMark sx={extraStyle} />;
+            icon = "";
             break;
     };
 
     let classFunction = '';
 
     if (document.body.offsetWidth > 900) {
-        classFunction = ({ isActive }) => (isActive ? 'activeNavLink' : '');
+        if (textColor == 'primary') {
+            classFunction = ({ isActive }) => (isActive ? 'activeNavLink_secondary' : '');
+        } else {
+            classFunction = ({ isActive }) => (isActive ? 'activeNavLink_primary' : '');
+        }
     }
 
     return (
         // Para cambiar el tamaño de los iconos: ListItem -> sx -> width
-        <ListItem sx={{ p: '0px', justifyContent: { md: 'end' }, width: { xs: '100%', md: 'auto' } }}>
+        <ListItem
+            sx=
+            {{
+                p: '0px',
+                justifyContent:
+                {
+                    md: 'end'
+                },
+                width:
+                {
+                    xs: '100%',
+                    md: 'auto'
+                },
+            }}
+        >
             <NavLink
                 to={navLink}
-                style={{ textDecoration: 'none', width: '100%' }}
+                style=
+                {{
+                    textDecoration: 'none',
+                    width: '100%'
+                }}
                 className={classFunction}
             >
-                <ListItemButton sx={{
-                    height: { xs: '70px', md: '100%' },
-                    width: '100%',
-                    padding: { md: '10px' },
-                    justifyContent: { md: 'center' },
-                }}>
+                <ListItemButton sx=
+                    {{
+                        height: { xs: '70px', md: '100%' },
+                        width: '100%',
+                        padding: { md: '10px' },
+                        justifyContent: { md: 'center' },
+                    }}
+                >
                     <ListItemIcon sx={{
                         alignItems: 'center',
                         minWidth: '0px',
-                    }} >
+                    }}
+                    >
                         <Badge
                             badgeContent={badgeContent}
                             color='error'
-                            sx={{ display: { md: 'none' } }} >
+                            sx=
+                            {{
+                                display:
+                                {
+                                    md: 'none',
+                                }
+                            }}
+                        >
                             {icon}
                         </Badge>
                         <ListItemText
-                            primary={text}
-                            sx={{ ml: { xs: '20px', md: '0px' }, color: { xs: palette.primary.main, md: palette.secondary.main } }}>
+                            sx=
+                            {{
+                                ml:
+                                {
+                                    xs: '20px',
+                                    md: '0px',
+                                }
+                            }}
+                        >
+                            <Typography
+                                color={textColor}
+                            >
+                                {text}
+                            </Typography>
                         </ListItemText>
                     </ListItemIcon>
                 </ListItemButton>
