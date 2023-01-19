@@ -2,7 +2,7 @@ import { AppBar, Box, Drawer, IconButton, Toolbar, Typography } from '@mui/mater
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
 import { NavBarMenuList } from './components';
-import { AppBreadcrumbs } from './components';
+import { AppBreadcrumbs } from '../components';
 import styled from '@emotion/styled';
 
 export const NavBar = () => {
@@ -56,7 +56,8 @@ export const NavBar = () => {
             </Box>
 
             {/* BREADCRUMBS */}
-            <Box sx={{ p: '10px' }}>
+
+            <Box>
                 <AppBreadcrumbs />
             </Box>
 

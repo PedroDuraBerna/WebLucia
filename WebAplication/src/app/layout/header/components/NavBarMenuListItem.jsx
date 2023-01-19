@@ -1,6 +1,5 @@
 import { AccountCircle, AppRegistration, Category, Home, Info, Login, Logout, Mail, Notifications, QuestionMark } from '@mui/icons-material';
 import { Badge, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
-import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { mainTheme } from '../../../../theme/mainTheme';
 
@@ -8,7 +7,6 @@ import { mainTheme } from '../../../../theme/mainTheme';
 
 const { palette } = mainTheme;
 const extraStyle = { color: { xs: palette.primary.main }, display: { md: 'none' }, fontSize: '30px' };
-const initialClassFunction = '';
 
 export const NavBarMenuListItem = ({ navLink = '/home', badgeContent = 0, type = 'AccountCircle', text = 'text' }) => {
 
