@@ -1,8 +1,9 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { AboutRoutes } from '../about/routes/AboutRoutes';
-import { AuthRoutes } from '../auth/routes/AuthRoutes';
-import { HomeRoutes } from '../home/routes/HomeRoutes';
-import { ProfileRoutes } from '../profile/routes/ProfileRoutes';
+import { AboutRoutes } from '../app/about/routes';
+import { AuthRoutes } from '../app/auth/routes';
+import { CategoriesRoutes } from '../app/categories/routes';
+import { HomeRoutes } from '../app/home/routes';
+import { ProfileRoutes } from '../app/profile/routes';
 
 export const AppRouter = () => {
   return (
@@ -11,6 +12,7 @@ export const AppRouter = () => {
       <Route path="/profile/*" element={<ProfileRoutes />} />
       <Route path="/auth/*" element={<AuthRoutes />} />
       <Route path="/about/*" element={<AboutRoutes />} />
+      <Route path="/categories/*" element={<CategoriesRoutes />} />
       <Route path='/*' element={<Navigate to='/home/*' />} />
     </Routes>
   )
