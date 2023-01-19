@@ -9,7 +9,7 @@ export const NavBarMenuList = ({ auth = 'not-authenticated' }) => {
     const listItemsFiltered = useCheckAuthList(auth, listItems);
 
     return (
-        <Box sx={{ display: { md: 'flex' } }}>
+        <Box sx={{ display: { md: 'flex' }}}>
             <List
                 sx={{ width: '100%', p: '0px', display: { md: 'flex' }, flex: 'row', justifyContent: 'end' }}
             >
@@ -17,7 +17,7 @@ export const NavBarMenuList = ({ auth = 'not-authenticated' }) => {
                     listItemsFiltered.map(item => <NavBarMenuListItem
                         type={item.icon}
                         text={item.text}
-                        key={`${item.text}`}
+                        key={item.text}
                         badgeContent={item.badgeContent}
                         navLink={item.navLink}
                     />)

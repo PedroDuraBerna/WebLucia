@@ -15,7 +15,7 @@ export const useCheckAuthList = (auth = '', items = [{ permission: '' }]) => {
                 setItemsFiltered(items.filter(item => (item.permission === 'authenticated' || item.permission === 'authenticated-writter' || item.permission === 'allways')));
                 break;
             case 'authenticated-writter-admin':
-                setItemsFiltered(items.filter(item => (item.permission.includes('authenticated') || item.permission === 'allways')));
+                setItemsFiltered(items.filter(item => (item.permission === 'authenticated' || item.permission === 'authenticated-writter' || item.permission === 'authenticated-writter-admin' || item.permission === 'allways')));
                 break;
             default:
                 setItemsFiltered(items.filter(item => (item.permission === 'not-authenticated' || item.permission === 'allways')));

@@ -1,4 +1,10 @@
+
 * {
     padding: 0px;
     margin: 0px;
+}
+
+.activeNavLink {
+    color: #fff;
+    background: #604ec4;
 }

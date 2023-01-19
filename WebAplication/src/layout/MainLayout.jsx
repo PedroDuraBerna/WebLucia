@@ -1,12 +1,12 @@
+import { LeftSideBar, NavBar, RightSideBar, Footer } from './';
 import { Grid } from '@mui/material';
-import { LeftSideBar, NavBar, RightSideBar } from '../components';
-import { Footer } from '../views';
 
 export const MainLayout = ({ children }) => {
+
   return (
     <>
       <NavBar></NavBar>
-      <Grid container spacing={1} >
+      <Grid container spacing={1} minHeight='70vh'>
         <Grid item xs={1} sm={2} md={3}>
           <LeftSideBar></LeftSideBar>
         </Grid>
