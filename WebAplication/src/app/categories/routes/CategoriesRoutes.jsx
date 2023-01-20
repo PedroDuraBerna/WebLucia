@@ -9,6 +9,7 @@ export const CategoriesRoutes = () => {
             <Route path='/noticias/*' element={<NewsView />} />
             <Route path='/arte_y_cultura/*' element={<BooksView />} />
             <Route path='/tecnologia/*' element={<FilmsView />} />
+            <Route path='/films/*' element={<FilmsView />} />
             <Route path="/*" element={<Navigate to="/home" />} />
         </Routes>
     )

@@ -2,21 +2,26 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore/lite";
+import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAKwQK-rq5Y7naoib7FdIok8WtAYXIYHjo",
-    authDomain: "react-curso-bf166.firebaseapp.com",
-    projectId: "react-curso-bf166",
-    storageBucket: "react-curso-bf166.appspot.com",
-    messagingSenderId: "836326013943",
-    appId: "1:836326013943:web:2eddd837e80fffb0b9ccf2"
+    apiKey: "AIzaSyBRmezG4NGzL8FcGQF60-c4vWE8I-uEus4",
+    authDomain: "digitalspace-5d8da.firebaseapp.com",
+    projectId: "digitalspace-5d8da",
+    storageBucket: "digitalspace-5d8da.appspot.com",
+    messagingSenderId: "939302786949",
+    appId: "1:939302786949:web:93a98bb843608c121e96ec",
+    measurementId: "G-S2NHH074QX"
 };
 
 // Initialize Firebase
 export const FirebaseApp = initializeApp(firebaseConfig);
+
+// Función para analitycs de firebase, no está configurado, ver tema npm
+export const analytics = getAnalytics(FirebaseApp);
 
 // Funcionalidades de autenticación en firebase
 export const FirebaseAuth = getAuth(FirebaseApp);

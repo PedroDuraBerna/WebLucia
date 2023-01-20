@@ -40,73 +40,72 @@ export const LoginPage = () => {
 
   return (
     <>
-      <h1>LoginPage</h1>
-      <p><NavLink to='/home' >Home</NavLink></p>
-      <p><NavLink to='/auth/register' >Register</NavLink></p>
-      <AuthLayout title="Login">
+      <AuthLayout>
+        <Typography color='primary' variant="h3" ><b>Login</b></Typography>
         <form onSubmit={onSubmit} className="animate__animated animate__fadeIn">
+          <Grid item xs={12} sx={{ mt: 2 }}>
+            <TextField
+              label="Correo"
+              type="email"
+              placeholder="correo"
+              fullWidth
+              name='email'
+              value={email}
+              onChange={onInputChange}
+            />
+          </Grid>
+          <Grid item xs={12} sx={{ mt: 2 }}>
+            <TextField
+              label="Contraseña"
+              type="password"
+              placeholder="Contraseña"
+              fullWidth
+              name='password'
+              value={password}
+              onChange={onInputChange}
+            />
+          </Grid>
           <Grid container>
-            <Grid item xs={12} sx={{ mt: 2 }}>
-              <TextField
-                label="Correo"
-                type="email"
-                placeholder="correo"
-                fullWidth
-                name='email'
-                value={email}
-                onChange={onInputChange}
-              />
+            <Grid
+              item xs={12}
+              sx={{ mt: 2 }}
+              display={!!errorMessage ? '' : 'none'}
+            >
+              <Alert severity="error">
+                {errorMessage}
+              </Alert>
             </Grid>
-            <Grid item xs={12} sx={{ mt: 2 }}>
-              <TextField
-                label="Contraseña"
-                type="password"
-                placeholder="Contraseña"
+          </Grid>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6} sx={{ mt: 2 }}>
+              <Button
+                disabled={isAuthenticating}
+                variant="contained"
                 fullWidth
-                name='password'
-                value={password}
-                onChange={onInputChange}
-              />
-            </Grid>
-            <Grid container>
-              <Grid
-                item xs={12}
-                sx={{ mt: 2 }}
-                display={!!errorMessage ? '' : 'none'}
+                type="submnit"
               >
-                <Alert severity="error">
-                  {errorMessage}
-                </Alert>
-              </Grid>
+                <Typography>Login</Typography>
+              </Button>
             </Grid>
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6} sx={{ mt: 2 }}>
-                <Button
-                  disabled={isAuthenticating}
-                  variant="contained"
-                  fullWidth
-                  type="submnit"
-                >
-                  <Typography>Login</Typography>
-                </Button>
-              </Grid>
-              <Grid item xs={12} sm={6} sx={{ mt: 2 }}>
-                <Button
-                  disabled={isAuthenticating}
-                  variant="contained"
-                  fullWidth
-                  onClick={onGoogleSignIn}
-                >
-                  <Google />
-                  <Typography>oogle</Typography>
-                </Button>
-              </Grid>
+            <Grid item xs={12} sm={6} sx={{ mt: 2 }}>
+              <Button
+                disabled={isAuthenticating}
+                variant="contained"
+                fullWidth
+                onClick={onGoogleSignIn}
+              >
+                <Google />
+                <Typography>oogle</Typography>
+              </Button>
             </Grid>
-            <Grid container direction="row" justifyContent="end" sx={{ mt: 2 }}>
-              <Link component={RouterLink} color="inherit" to="/auth/register">
-                <Typography>Crear una cuenta</Typography>
-              </Link>
-            </Grid>
+          </Grid>
+          <Grid container direction="row" justifyContent='space-between' sx={{ mt: 2 }}>
+            <Link component={RouterLink} color="inherit" to="/home">
+              <Typography>Volver a Digital Space</Typography>
+            </Link>
+            <Link component={RouterLink} color="inherit" to="/auth/register">
+              <Typography>Crear una cuenta</Typography>
+            </Link>
           </Grid>
         </form>
       </AuthLayout>

@@ -17,6 +17,7 @@ export const NavBarMenuList = ({ listItems = [], textColor = 'primary' }) => {
                     display: { md: 'flex' },
                     flex: 'row',
                     justifyContent: 'end',
+                    mt: {xs: '30px', md: '0px'},
                 }}
             >
                 {

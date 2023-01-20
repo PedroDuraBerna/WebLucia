@@ -1,4 +1,5 @@
-import { Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 // Este componente se ocupa de manejar los estilos a reutilizar en el componente
 export const AuthLayout = ({ children, title = '' }) => {
@@ -11,13 +12,13 @@ export const AuthLayout = ({ children, title = '' }) => {
             justifyContent="center"
             // Con el sx tenemos acceso a los temas que hemos creado nosotros
             sx={{ minHeight: '100vh', backgroundColor: 'primary.main', padding: 4 }}>
-
-            <Grid item
+            <Grid
+                item
                 className="box-shadow"
                 // Esto quiere decir que en pantallas pequeñas va a tener 3 posiciones
                 xs={3}
                 sx={{
-                    width: { md: 450 },
+                    width: { md: 450, xs: '100%' },
                     backgroundColor: 'white',
                     padding: 3,
                     borderRadius: 2
