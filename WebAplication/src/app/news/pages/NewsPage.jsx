@@ -1,9 +1,7 @@
-import { Divider, Typography } from '@mui/material';
-import { Link, NavLink } from 'react-router-dom';
-import { MainLayout } from '../../layout';
+import { Divider, Typography } from "@mui/material";
+import { MainLayout } from "../../layout";
 
-export const HomePage = () => {
-
+export const NewsPage = () => {
   return (
     <MainLayout>
       <Typography
@@ -11,7 +9,7 @@ export const HomePage = () => {
         variant='h2'
         color='primary'
       >
-        Home
+        Noticias
       </Typography>
       <Divider
         sx=
@@ -36,24 +34,6 @@ export const HomePage = () => {
         de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente
         con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
       </Typography>
-      <Typography>
-        Enlace para logearse en la aplicación web:
-      </Typography>
-      <NavLink to='../../auth/login' >Login</NavLink>
-      <Typography>
-        Enlace para registrarsee en la aplicación web:
-      </Typography>
-      <Typography>
-        <NavLink to='../../auth/register' >Registro</NavLink>
-      </Typography>
-      <Divider
-        sx=
-        {{
-          marginTop: '20px',
-          marginBottom: '20px',
-        }}
-      >
-      </Divider>
       <Typography
         fontWeight='bold'
         variant='h4'

@@ -8,7 +8,7 @@ export const subMenuListItems = [
         text: 'Noticias',
         badgeContent: 0,
         permission: 'allways',
-        navLink: '/noticias',
+        navLink: '/news',
         description: 'texto para describir la categoría',
         subcategories: [
             {
@@ -36,7 +36,7 @@ export const subMenuListItems = [
         text: 'Arte y Cultura',
         badgeContent: 0, // Lo obtendríamos del store
         permission: 'allways',
-        navLink: '/arte_y_cultura',
+        navLink: '/art_and_culture',
         description: 'texto para describir la categoría',
         subcategories: [
             {
@@ -73,7 +73,7 @@ export const subMenuListItems = [
         text: 'Tecnología',
         badgeContent: 0, // Lo obtendríamos del store
         permission: 'allways',
-        navLink: '/tecnología',
+        navLink: '/technology',
         description: 'texto para describir la categoría',
         subcategories: [
             {

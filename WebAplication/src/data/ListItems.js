@@ -9,13 +9,6 @@ export const listItems = [
         permission: 'allways',
         navLink: '/home',
     },
-    {
-        icon: 'Category',
-        text: 'Categorías',
-        badgeContent: 0, // Lo obtendríamos del store
-        permission: 'allways',
-        navLink: '/categories',
-    },
     // {
     //     icon: 'Notifications',
     //     text: 'Notificaciones',

@@ -5,8 +5,7 @@ import { NavBarMenuList } from './components';
 import { AppBreadcrumbs } from '../components';
 import styled from '@emotion/styled';
 import { useCheckAuthList } from './hooks';
-import { listItems } from './data';
-import { subMenuListItems } from '../../../data';
+import { listItems, subMenuListItems } from '../../../data';
 import { ArrowCircleRight } from '@mui/icons-material';
 
 export const NavBar = () => {

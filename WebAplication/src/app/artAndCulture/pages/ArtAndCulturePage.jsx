@@ -1,8 +1,7 @@
-import { Divider, Typography } from '@mui/material';
-import React from 'react';
-import { MainLayout } from '../../layout/MainLayout';
+import { Divider, Typography } from "@mui/material";
+import { MainLayout } from "../../layout";
 
-export const AboutPage = () => {
+export const ArtAndCulturePage = () => {
     return (
         <MainLayout>
             <Typography
@@ -10,7 +9,7 @@ export const AboutPage = () => {
                 variant='h2'
                 color='primary'
             >
-                Sobre Nosotros
+                Arte y Cultura
             </Typography>
             <Divider
                 sx=
