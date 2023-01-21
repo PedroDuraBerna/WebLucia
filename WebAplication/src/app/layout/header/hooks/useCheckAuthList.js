@@ -8,6 +8,9 @@ export const useCheckAuthList = (auth = '', items = [{ permission: '' }]) => {
     useMemo(() => {
 
         switch (auth) {
+            case ' not-authenticated':
+                setItemsFiltered(items.filter(item => (item.permission === 'not-authenticated' || item.permission === 'allways')));
+                break;
             case 'authenticated':
                 setItemsFiltered(items.filter(item => (item.permission === 'authenticated' || item.permission === 'allways')));
                 break;

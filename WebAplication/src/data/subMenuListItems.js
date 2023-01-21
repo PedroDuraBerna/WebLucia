@@ -8,7 +8,7 @@ export const subMenuListItems = [
         text: 'Noticias',
         badgeContent: 0,
         permission: 'allways',
-        navLink: '/news',
+        navLink: '/home/news',
         description: 'texto para describir la categoría',
         subcategories: [
             {
@@ -17,7 +17,7 @@ export const subMenuListItems = [
                 text: 'Acualidad',
                 badgeContent: 0,
                 permission: 'allways',
-                navLink: '/actualidad',
+                navLink: '/news/topically',
                 description: 'texto para describir la subcategoría',
             },
             {
@@ -26,7 +26,7 @@ export const subMenuListItems = [
                 text: 'Deportes',
                 badgeContent: 0,
                 permission: 'allways',
-                navLink: '/deportes',
+                navLink: '/home/sports',
                 description: 'texto para describir la subcategoría',
             },
         ]
@@ -36,7 +36,7 @@ export const subMenuListItems = [
         text: 'Arte y Cultura',
         badgeContent: 0, // Lo obtendríamos del store
         permission: 'allways',
-        navLink: '/art_and_culture',
+        navLink: '/home/art_and_culture',
         description: 'texto para describir la categoría',
         subcategories: [
             {
@@ -45,7 +45,7 @@ export const subMenuListItems = [
                 text: 'Películas',
                 badgeContent: 0,
                 permission: 'allways',
-                navLink: '/peliculas',
+                navLink: '/home/art_and_culture/films',
                 description: 'texto para describir la subcategoría',
             },
             {
@@ -54,7 +54,7 @@ export const subMenuListItems = [
                 text: 'Fotografía',
                 badgeContent: 0,
                 permission: 'allways',
-                navLink: '/fotografia',
+                navLink: '/home/art_and_culture/photography',
                 description: 'texto para describir la subcategoría',
             },
             {
@@ -63,7 +63,7 @@ export const subMenuListItems = [
                 text: 'Esculturas',
                 badgeContent: 0,
                 permission: 'allways',
-                navLink: '/esculturas',
+                navLink: '/home/art_and_culture/sculpture',
                 description: 'texto para describir la subcategoría',
             },
         ]
@@ -73,7 +73,7 @@ export const subMenuListItems = [
         text: 'Tecnología',
         badgeContent: 0, // Lo obtendríamos del store
         permission: 'allways',
-        navLink: '/technology',
+        navLink: '/home/technology',
         description: 'texto para describir la categoría',
         subcategories: [
             {
@@ -82,7 +82,7 @@ export const subMenuListItems = [
                 text: 'Software',
                 badgeContent: 0,
                 permission: 'allways',
-                navLink: '/software',
+                navLink: '/home/technology/software',
                 description: 'texto para describir la subcategoría',
             },
             {
@@ -92,7 +92,7 @@ export const subMenuListItems = [
                 text: 'Hardware',
                 badgeContent: 0,
                 permission: 'allways',
-                navLink: '/hardware',
+                navLink: '/home/technology/hardware',
                 description: 'texto para describir la subcategoría',
             },
             {
@@ -101,7 +101,7 @@ export const subMenuListItems = [
                 text: 'Ordenadores',
                 badgeContent: 0,
                 permission: 'allways',
-                navLink: '/ordenadores',
+                navLink: '/home/technology/ordenadores',
                 description: 'texto para describir la subcategoría',
             },
             {
@@ -110,7 +110,7 @@ export const subMenuListItems = [
                 text: 'Móviles',
                 badgeContent: 0,
                 permission: 'allways',
-                navLink: '/moviles',
+                navLink: '/home/technology/moviles',
                 description: 'texto para describir la subcategoría',
             },
         ]

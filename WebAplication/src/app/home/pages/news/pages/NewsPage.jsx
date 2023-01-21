@@ -1,5 +1,5 @@
 import { Divider, Typography } from "@mui/material";
-import { MainLayout } from "../../layout";
+import { MainLayout } from "../../../../../app/layout";
 
 export const NewsPage = () => {
   return (

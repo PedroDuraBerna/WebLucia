@@ -2,13 +2,13 @@
 // Estos son los botonos inmutables de la WEB
 
 export const listItems = [
-    {
-        icon: 'Home',
-        text: 'Home',
-        badgeContent: 0, // Lo obtendríamos del store
-        permission: 'allways',
-        navLink: '/home',
-    },
+    // {
+    //     icon: 'Home',
+    //     text: 'Home',
+    //     badgeContent: 0, // Lo obtendríamos del store
+    //     permission: 'allways',
+    //     navLink: '/home',
+    // },
     // {
     //     icon: 'Notifications',
     //     text: 'Notificaciones',
@@ -63,7 +63,7 @@ export const listItems = [
         text: 'Sobre nosotros',
         badgeContent: 0, // Lo obtendríamos del store
         permission: 'allways',
-        navLink: '/about',
+        navLink: '/home/about',
     },
     {
         icon: 'Login',
@@ -77,6 +77,6 @@ export const listItems = [
         text: 'Perfil',
         badgeContent: 0, // Lo obtendríamos del store
         permission: 'authenticated',
-        navLink: '/profile',
+        navLink: '/home/profile',
     },
 ];

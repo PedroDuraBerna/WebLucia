@@ -7,14 +7,15 @@ import styled from '@emotion/styled';
 import { useCheckAuthList } from './hooks';
 import { listItems, subMenuListItems } from '../../../data';
 import { ArrowCircleRight } from '@mui/icons-material';
+import { useSelector } from 'react-redux';
 
 export const NavBar = () => {
 
     // Obtenemos auth del store
-    const auth = 'authenticated-editor-admin'; // Seteo esto para codificar
+    const { status } = useSelector(state => state.auth);
 
     // Con este hook enviamos List items y la autorización, devolviéndonos si esos items podemos verlos
-    const listItemsFiltered = useCheckAuthList(auth, listItems);
+    const listItemsFiltered = useCheckAuthList(status, listItems);
 
     const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -205,7 +206,7 @@ export const NavBar = () => {
                 <Box>
                     <NavBarMenuList
                         listItems={listItemsFiltered}
-                        auth={auth} />
+                        auth={status} />
                 </Box>
             </Drawer>
         </>

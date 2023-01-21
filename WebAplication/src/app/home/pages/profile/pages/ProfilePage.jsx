@@ -1,7 +1,7 @@
-import { Divider, Typography } from '@mui/material'
-import { MainLayout } from '../../layout'
+import { Divider, Typography } from '@mui/material';
+import { MainLayout } from '../../../../layout/MainLayout';
 
-export const TechnologyPage = () => {
+export const ProfilePage = () => {
     return (
         <MainLayout>
             <Typography
@@ -9,7 +9,7 @@ export const TechnologyPage = () => {
                 variant='h2'
                 color='primary'
             >
-                Tecnología
+                Perfil
             </Typography>
             <Divider
                 sx=
